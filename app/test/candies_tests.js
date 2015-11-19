@@ -48,17 +48,14 @@ describe("Candies", function(done){
       }).end(done)
     })
 
-  it("should add a candy object to the collection candies and return it", function(done){
-    api.get("/candies")
-    .set("Accept", "application/json")
-    .end(function(error, response){
-      expect(response.body.length).to.equal(5);
-      done()
+    it("should add a candy object to the collection candies and return it", function(done){
+      api.get("/candies")
+      .set("Accept", "application/json")
+      .end(function(error, response){
+        expect(response.body.length).to.equal(5);
+        done()
+      })
     })
   })
 
-  })
 })
-
-
-
